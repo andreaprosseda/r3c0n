@@ -1,6 +1,7 @@
 import os
 import shutil
 
+from .config import *
 from .log_utils import *
 from r3c0n.model.enum.message import Message
 
@@ -26,7 +27,7 @@ def writeFile(file, content, workspace):
 
 
 def getWorkspace(name):
-    desktop = os.path.expanduser("~/Desktop")
+    desktop = getBaseFolder()
     workspace = getFilePath(desktop, name)
     return workspace
 

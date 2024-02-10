@@ -9,6 +9,7 @@ class Message(Enum):
     WK_CREATED                  = {'status': Status.IO,      'text': '[WORKSPACE] Workspace {} created!'}
     FILE_SAVED                  = {'status': Status.IO,      'text': '[WORKSPACE] File saved in workspace {}'}
     ROOT_PRIVILEGES_REQUIRED    = {'status': Status.WARNING, 'text': '[ROOT] Root privileges are required for this command [{}], skipping...'}
+    NO_ROOT_PRIVILEGES          = {'status': Status.WARNING, 'text': '[ROOT] No Root privileges found, following commands will be skipped [NMAP UDP]'}
     
     PING_START                  = {'status': Status.INFO,    'text': '[PING] Ping {}, please wait...'}
     PING_OK                     = {'status': Status.SUCCESS, 'text': '[PING] {} is up and running!'}

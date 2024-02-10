@@ -34,3 +34,11 @@ def getWorkspace(name):
 
 def getFilePath(workspace, fileName):
     return workspace+"/"+fileName
+
+
+def getContinueOrExitAnswer():
+    answer = ''
+    while answer.lower().strip() != 'y':
+        answer = input("Would you like to continue? [y/n]")
+        if answer.lower().strip() == 'n':
+            exit()

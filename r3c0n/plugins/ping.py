@@ -1,6 +1,7 @@
 from ..model.plugin import Plugin
 from ..model.outcome import Outcome
 from ..model.enum.message import Message
+from ..utils.io_utils import getContinueOrExitAnswer
 from ..utils.log_utils import *
 from ..utils.system import run
 
@@ -27,5 +28,5 @@ class Ping(Plugin):
             log(Message.PING_OK, context.url)
         else:
             log(Message.PING_KO, context.url)
-            exit()
+            getContinueOrExitAnswer()
         newLine()
